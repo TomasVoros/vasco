@@ -439,7 +439,7 @@ class MainWindow(MainWindowPlots):
     def _import_projection_parameters(self, filename: Path):
         try:
             self._block_parameter_signals(True)
-            with open(filename, 'r') as file:
+            with open(filename, 'r', encoding='utf-8') as file:
                 try:
                     data = dotmap.DotMap(yaml.safe_load(file), _dynamic=False)
                     for param, widget in self.param_widgets.items():

@@ -10,7 +10,7 @@ class XMLExporter(Exporter):
             file.write(
 f"""<?xml version="1.0" encoding="UTF-8" ?>
 <ufoanalyzer_record version ="200"
-    clip_name="{self.matcher.sensor_data.name}"
+    clip_name="{str(self.matcher.sensor_data.name)[2:-3]}"
     o="1"
     y="{self._time.strftime("%Y")}"
     mo="{self._time.strftime("%m")}"
@@ -45,7 +45,7 @@ f"""<?xml version="1.0" encoding="UTF-8" ?>
             y2="0" az1="0" ev1="0" az2="0"
             ev2="0" azm="0" evm="0" ra1="0"
             dc1="0" ra2="0" dc2="0" ram="0"
-            dcm="0" class="spo" m="0" dr="0"
+            dcm="0" class="" m="0" dr="0"
             dv="0" Vo="0" lng1="0" lat1="0"
             h1="0" dist1="0" gd1="0" azL1="0"
             evL1="0" lng2="0" lat2="0" h2="0"

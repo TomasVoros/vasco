@@ -11,7 +11,7 @@ scipy = "*"
 matplotlib = "*"
 pyyaml = "*"
 lxml = "*"
-amosutils = {file = "../amosutils", editable = true}
+amosutils = {file = "../amos-utils", editable = true}
 colorama = "*"
 dotmap = "*"
 
